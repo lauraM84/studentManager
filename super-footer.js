@@ -1,36 +1,36 @@
-class SuperFooter extends HTMLElement{
+class SuperFooter extends HTMLElement {
 
-    constructor(){
+    constructor() {
         super();
-        this.shadow = this.attachShadow({mode: 'open'});
+        this.shadow = this.attachShadow({ mode: 'open' });
     }
 
-    get info(){
+    get info() {
         return this.getAttribute('super-info') || 'hai dimenticato le info!!';
     }
 
-    get backgroundColor(){
-        return this.getAttribute('b-color') || 'crimson'
+    get backgroundColor() {
+        return this.getAttribute('b-color') || 'lightpink'
     }
 
-    connectedCallback(){
+    connectedCallback() {
         console.log('coonected')
         this.style();
         this.render()
     }
 
-    style(){
+    style() {
         const style = document.createElement('style');
         style.innerText = `
             .footer-info{
                 background-color: ${this.backgroundColor};
-                color: black;
+                color: grey;
             }
         `
         this.shadow.appendChild(style);
     }
 
-    render(){
+    render() {
         const mainDiv = document.createElement('div');
         mainDiv.innerHTML = `
             <p class="footer-info">${this.info}</p>

@@ -1,16 +1,16 @@
-const service = new StudentService();
-service.loadStudents().then(() => render(service.students))
+// const service = new StudentService();
+// service.loadStudents().then(() => render(service.students))
 
-function render(students) {
-    const main = document.getElementById('main-div')
-    main.innerHTML = '';
+// function render(students) {
+//     const main = document.getElementById('card-grid')
+//     main.innerHTML = '';
 
-    for (const student of students) {
-        
-        const card = document.createElement('student-card');
-        card.setAttribute('selected-student', JSON.stringify(student));
-        // card.student = student;
+//     for (const student of students) {
 
-        main.appendChild(card)
-    }
-}
+//         const card = document.createElement('student-card');
+//         card.setAttribute('selected-student', JSON.stringify(student));
+//         // card.student = student;
+
+//         main.appendChild(card)
+//     }
+// }

@@ -1,33 +1,33 @@
-class SuperHeader extends HTMLElement{
+class SuperHeader extends HTMLElement {
 
     constructor() {
         super()
         this.shadow = this.attachShadow({ mode: "open" });
     }
 
-    connectedCallback(){
+    connectedCallback() {
         this.style();
         this.render();
     }
 
-    style(){
+    style() {
         const style = document.createElement('style');
         let bColor = this.getAttribute('b-color');
-        if(!bColor){
-        console.log('accidenti!!')
-            bColor = 'crimson';
+        if (!bColor) {
+            console.log('accidenti!!')
+            bColor = 'lightblue';
         }
         style.innerText = `
             .main-title{
                 background-color: ${bColor};
-                color: gold;
+                color: grey;
             }
         `
         this.shadow.appendChild(style);
     }
 
-    render(){
-        const title  = document.createElement('h1');
+    render() {
+        const title = document.createElement('h1');
         title.classList.add('main-title');
         const titleAttribute = this.getAttribute('super-title');
         const titleNode = document.createTextNode(titleAttribute);
