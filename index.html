@@ -5,20 +5,20 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <!-- <style>
+        body{
+            background-color: brown;
+        }
+    </style> -->
+    <link rel="stylesheet" href="./style.css">
 </head>
 
 <body>
-    <super-header super-title="Hello!!!" b-color="lightblue"></super-header>
-
-    <super-grid super-gridMin="300px" super-gridMax="1fr" id="card-grid"></super-grid>
-
-    <super-footer super-info="copyright student manager s.p.a" b-color="pink"></super-footer>
+    <super-dialog id="student-dialog"></super-dialog>
+    <super-header super-title="Hello!!!"></super-header>
+    <super-grid></super-grid>
+    <super-footer super-info="copyright student manager s.p.a"></super-footer>
 </body>
-<script src="./super-header.js"></script>
-<script src="./super-footer.js"></script>
-<script src="./student-card.js"></script>
-<script src="./student-service.js"></script>
-<script src="./super-grid.js"></script>
-<script src="./main.js"></script>
+<script type="module" src="./src/main.js"></script>
 
 </html>

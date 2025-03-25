@@ -1,4 +1,4 @@
-class SuperHeader extends HTMLElement {
+export default class SuperHeader extends HTMLElement {
 
     constructor() {
         super()
@@ -14,13 +14,12 @@ class SuperHeader extends HTMLElement {
         const style = document.createElement('style');
         let bColor = this.getAttribute('b-color');
         if (!bColor) {
-            console.log('accidenti!!')
             bColor = 'lightblue';
         }
         style.innerText = `
             .main-title{
                 background-color: ${bColor};
-                color: grey;
+                color: gray;
             }
         `
         this.shadow.appendChild(style);
